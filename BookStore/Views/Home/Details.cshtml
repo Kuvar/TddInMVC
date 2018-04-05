@@ -1,0 +1,28 @@
+﻿@model BookStore.Models.Book
+
+<div class="row">
+    <div class="col-sm-12">
+        <fieldset>
+            <legend>Book</legend>
+
+            <div class="display-label">BookName</div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.BookName)
+            </div>
+
+            <div class="display-label">AuthorName</div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.AuthorName)
+            </div>
+
+            <div class="display-label">ISBN</div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.ISBN)
+            </div>
+        </fieldset>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+</div>
